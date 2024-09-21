@@ -7,12 +7,17 @@
 import type {GatsbyConfig} from 'gatsby';
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: 'nituc-fes2024',
-    siteUrl: 'https://www.yourdomain.tld',
-  },
   graphqlTypegen: true,
-  plugins: ['gatsby-plugin-sitemap'],
+  plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-vanilla-extract',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/icon.jpg',
+      },
+    },
+  ],
 };
 
 export default config;

@@ -1,0 +1,11 @@
+:root {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', system-ui;
+  color: #262523;
+  background-color: #e3e2dd;
+}

@@ -3,7 +3,3 @@ node_modules/
 public
 src/gatsby-types.d.ts
 
-static/favicon.ico
-static/*.png
-static/*.jpg
-src/assets

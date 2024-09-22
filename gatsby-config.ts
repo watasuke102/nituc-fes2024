@@ -7,6 +7,9 @@
 import type {GatsbyConfig} from 'gatsby';
 
 const config: GatsbyConfig = {
+  siteMetadata: {
+    siteUrl: 'https://nituc-fes61.org',
+  },
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-sitemap',
@@ -14,7 +17,12 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: '宇部高専 第61回高専祭 公式サイト',
+        short_name: '宇部高専 第61回高専祭',
         icon: 'static/icon.jpg',
+        background_color: '#e3e2dd',
+        theme_color: '#e3e2dd',
+        display: 'minimal-ui',
       },
     },
   ],

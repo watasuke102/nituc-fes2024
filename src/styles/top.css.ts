@@ -11,8 +11,9 @@ export const css = {
   container: style({
     height: '100dvh',
     alignContent: 'center',
-    justifySelf: 'center',
-    justifyItems: 'center',
     textAlign: 'center',
+  }),
+  logo: style({
+    margin: 'auto',
   }),
 };

@@ -6,6 +6,11 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import {css} from '../styles/top.css';
 import React from 'react';
+import {Seo} from '../components/Seo/Seo';
+
+export const Head = (): React.ReactElement => (
+  <Seo title_prefix='' desc='実施日：2024年11月9日（土）・10日（日）' url='' />
+);
 
 export default function Index(): React.ReactElement {
   return (

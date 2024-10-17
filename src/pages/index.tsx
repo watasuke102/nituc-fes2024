@@ -14,12 +14,16 @@ export const Head = (): React.ReactElement => (
 
 export default function Index(): React.ReactElement {
   return (
-    <main className={css.container}>
-      <h1>宇部高専 第61回高専祭</h1>
-      <img alt='' src='/logo.png' className={css.logo} />
-      <div>
-        <p>開催日：2024-11-09, 10</p>
-        <p>工事中...</p>
+    <main>
+      <div className={css.entrypoint_wrapper}>
+        <div className={css.entrypoint_circle}>
+          <h1 className={css.entrypoint_title}>宇部高専 第61回高専祭</h1>
+          <img alt='' src='/logo.png' loading='eager' />
+          <span className={css.entrypoint_date}>2024-11-09 & 10</span>
+        </div>
+      </div>
+      <div className={css.info_container}>
+        <p>開催日：2024年11月09日 (土), 10日 (日)</p>
       </div>
     </main>
   );

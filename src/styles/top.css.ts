@@ -78,6 +78,7 @@ export const css = {
     textAlign: 'center',
     paddingTop: 12,
     paddingBottom: 20,
+    borderRadius: 4,
     backgroundColor: colors.bg,
     opacity: 0,
     animation: `${info_fadein} 1s linear 2.7s forwards`,

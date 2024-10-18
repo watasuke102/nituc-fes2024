@@ -14,8 +14,9 @@ export const Head = (): React.ReactElement => (
 
 export default function Index(): React.ReactElement {
   return (
-    <main>
+    <main className={css.main}>
       <div className={css.entrypoint_wrapper}>
+        <div className={css.entrypoint_bg} />
         <div className={css.entrypoint_circle}>
           <h1 className={css.entrypoint_title}>宇部高専 第61回高専祭</h1>
           <img alt='' src='/logo.png' loading='eager' />

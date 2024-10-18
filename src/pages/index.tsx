@@ -6,7 +6,7 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import {css} from '../styles/top.css';
 import React from 'react';
-import {Seo} from '../components/Seo/Seo';
+import {Seo} from '../common/Seo/Seo';
 import {Countdown} from '../features';
 
 export const Head = (): React.ReactElement => (

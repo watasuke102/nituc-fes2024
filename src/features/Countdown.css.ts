@@ -6,27 +6,25 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import {style} from '@vanilla-extract/css';
 
-export const css = {
-  container: style({
-    height: 64,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  }),
-  times: style({
-    height: 36,
-    display: 'flex',
-    alignItems: 'center',
-    fontSize: '1.15em',
-  }),
-  num: style({
-    width: 40,
-    margin: '0 6px',
-    fontWeight: 'bold',
-    fontSize: '1.8em',
-  }),
-  announce: style({
-    fontWeight: 'bold',
-    fontSize: '2.3em',
-  }),
-};
+export const container = style({
+  height: 64,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+});
+export const times = style({
+  height: 36,
+  display: 'flex',
+  alignItems: 'center',
+  fontSize: '1.15em',
+});
+export const num = style({
+  width: 40,
+  margin: '0 6px',
+  fontWeight: 'bold',
+  fontSize: '1.8em',
+});
+export const announce = style({
+  fontWeight: 'bold',
+  fontSize: '2.3em',
+});

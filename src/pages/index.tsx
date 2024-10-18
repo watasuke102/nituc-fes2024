@@ -4,7 +4,7 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
-import {css} from '../styles/top.css';
+import * as css from '../styles/top.css';
 import React from 'react';
 import {Seo} from '../common/Seo/Seo';
 import {Countdown} from '../features';

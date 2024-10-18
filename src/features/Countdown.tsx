@@ -4,7 +4,7 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
-import {css} from './Countdown.css';
+import * as css from './Countdown.css';
 import React from 'react';
 
 type Props = {

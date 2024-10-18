@@ -17,6 +17,11 @@ const intro_animation_1 = keyframes({
   '100%': {clipPath: 'circle(100%)'},
 });
 
+const info_fadein = keyframes({
+  '0%': {opacity: 0},
+  '100%': {opacity: 1},
+});
+
 export const css = {
   main: style({
     backgroundColor: colors.fg,
@@ -25,7 +30,7 @@ export const css = {
     clipPath: 'circle(0px)', // initialize for animation
     animation: `
       ${intro_animation_0} 0.7s forwards 0.4s ease,
-      ${intro_animation_1} 1.3s forwards 1.7s cubic-bezier(0.22, 1, 0.36, 1)
+      ${intro_animation_1} 1.5s forwards 1.9s cubic-bezier(0.22, 1, 0.36, 1)
     `,
     height: '100dvh',
     alignContent: 'center',
@@ -65,10 +70,16 @@ export const css = {
     bottom: 64,
   }),
   info_container: style({
-    width: '100%',
+    position: 'fixed',
+    bottom: 24,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: 'min(100%, 550px)',
     textAlign: 'center',
-    paddingTop: 16,
-    paddingBottom: 40,
+    paddingTop: 12,
+    paddingBottom: 20,
     backgroundColor: colors.bg,
+    opacity: 0,
+    animation: `${info_fadein} 1s linear 2.7s forwards`,
   }),
 };

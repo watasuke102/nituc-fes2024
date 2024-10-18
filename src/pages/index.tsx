@@ -7,6 +7,7 @@
 import {css} from '../styles/top.css';
 import React from 'react';
 import {Seo} from '../components/Seo/Seo';
+import {Countdown} from '../features';
 
 export const Head = (): React.ReactElement => (
   <Seo title_prefix='' desc='実施日：2024年11月9日（土）・10日（日）' url='' />
@@ -24,7 +25,10 @@ export default function Index(): React.ReactElement {
         </div>
       </div>
       <div className={css.info_container}>
-        <p>開催日：2024年11月09日 (土), 10日 (日)</p>
+        <p>
+          開催日：2024年<strong>11月09日 (土), 10日 (日)</strong>
+        </p>
+        <Countdown />
       </div>
     </main>
   );

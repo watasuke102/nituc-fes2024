@@ -20,6 +20,7 @@
     "@vanilla-extract/webpack-plugin": "^2.3.13",
     "classnames": "^2.5.1",
     "gatsby": "^5.13.7",
+    "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-plugin-vanilla-extract": "^4.0.2",

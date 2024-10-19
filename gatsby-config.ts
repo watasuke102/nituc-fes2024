@@ -6,11 +6,13 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import type {GatsbyConfig} from 'gatsby';
 
+const siteUrl = 'https://nituc-fes61.org';
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: 'https://nituc-fes61.org',
+    siteUrl,
   },
   graphqlTypegen: true,
+  trailingSlash: 'never',
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-vanilla-extract',
@@ -23,6 +25,13 @@ const config: GatsbyConfig = {
         background_color: '#e3e2dd',
         theme_color: '#e3e2dd',
         display: 'minimal-ui',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl,
+        stripQueryString: true,
       },
     },
   ],

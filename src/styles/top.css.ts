@@ -60,6 +60,8 @@ export const entrypoint_title = style({
   top: 72,
   fontSize: '24px',
   fontWeight: 'bold',
+  // dispel global
+  backgroundColor: 'transparent',
 });
 export const entrypoint_date = style({
   position: 'absolute',

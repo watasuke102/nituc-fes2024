@@ -63,7 +63,8 @@ export const entrypoint_title = style({
 });
 export const entrypoint_date = style({
   position: 'absolute',
-  bottom: 64,
+  fontSize: 22,
+  bottom: 72,
 });
 
 const info_fadein = keyframes({

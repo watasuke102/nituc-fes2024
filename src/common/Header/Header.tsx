@@ -15,9 +15,8 @@ export function Header(): JSX.Element {
   const links = [
     {to: '/timetable', text: 'タイムテーブル'},
     {to: '/events', text: 'イベント'},
-    {to: '/exhibitions', text: '展示'},
-    {to: '/map', text: '場内マップ'},
-    {to: '/access', text: 'アクセス'},
+    {to: '/exhibitions', text: '展示・バザー'},
+    {to: '/map', text: '場内マップ・アクセス'},
   ];
 
   return (

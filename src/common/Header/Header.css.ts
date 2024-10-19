@@ -16,7 +16,8 @@ export const header = style({
   top: 0,
   left: 0,
   width: '100%',
-  backgroundColor: `${colors.bg}cc`,
+  background: `linear-gradient(100deg, ${colors.p_g} 30%, ${colors.bg} 48%)`,
+  borderBottom: `5px dotted ${colors.fg}`,
 });
 
 export const main = style({
@@ -97,14 +98,15 @@ export const menu = style({
   transition: 'height 0.2s ease',
 });
 export const menu_opening = style({
-  height: 216,
+  height: 204,
 });
 
 export const menu_links = style({
   paddingInline: 12,
 });
 export const menu_link_item = style({
+  textAlign: 'center',
   display: 'block',
   fontSize: '1.15em',
-  marginBottom: 8,
+  padding: 8,
 });

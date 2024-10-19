@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "tsc --noEmit ; eslint --fix .",
-    "new": "scaffdog generate common"
+    "new": "scaffdog generate"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.15.5",

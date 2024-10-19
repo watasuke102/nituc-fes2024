@@ -14,7 +14,7 @@ interface Props {
 
 export const Seo = (props: Props): React.ReactElement => {
   const title = `${props.title_prefix === '' ? '' : props.title_prefix + ' | '} 宇部高専 第61回高専祭`;
-  const url = `https://watasuke.net${props.url}`;
+  const url = `https://nituc-fes61.org${props.url}`;
   const desc = `2024年度 宇部工業高等専門学校 第61回高専祭「YOISYO!」 公式Webサイト | ${props.desc}`;
   return (
     <>

@@ -84,14 +84,18 @@ export default function Timetable(): JSX.Element {
         <h1>タイムテーブル</h1>
         <div className={css.tables_wrapper}>
           <section>
-            <h2 className={css.heading}>1日目 - 11/09 (土)</h2>
+            <div className={css.heading_wrapper}>
+              <h2 className={css.heading}>1日目 - 11/09 (土)</h2>
+            </div>
             <span className={css.misc_schedule}>
               (工学実験・展示・バザー：<strong>09:30～16:30</strong>)
             </span>
             <Table list={timetable_first} />
           </section>
           <section>
-            <h2 className={css.heading}>2日目 - 11/10 (日)</h2>
+            <div className={css.heading_wrapper}>
+              <h2 className={css.heading}>2日目 - 11/10 (日)</h2>
+            </div>
             <span className={css.misc_schedule}>
               (工学実験・展示・バザー：<strong>09:30～15:00</strong>)
             </span>

@@ -23,21 +23,28 @@ export const tables_wrapper = style({
   },
 });
 
-export const heading = style({
-  textAlign: 'right',
+export const heading_wrapper = style({
+  display: 'grid',
+  gridTemplate: `
+    ".   text" auto
+    "bar text" 8px
+    ".   text" auto / 1fr auto
+  `,
+  columnGap: 12,
   marginBlock: 4,
   paddingRight: 8,
-  position: 'relative',
+  textAlign: 'right',
   '::before': {
     content: '',
+    gridArea: 'bar',
     display: 'block',
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    width: 'calc(100% - 250px)',
-    height: 8,
+    width: '100%',
+    height: '100%',
     backgroundColor: colors.p_r,
   },
+});
+export const heading = style({
+  gridArea: 'text',
 });
 export const misc_schedule = style({
   display: 'inline-block',

@@ -66,14 +66,29 @@ export const show_hour = style({
   flexDirection: 'column',
   justifyContent: 'center',
 });
+export const hour_grid = style({
+  gridColumn: '2 / 4',
+  position: 'relative',
+  '::before': {
+    content: '',
+    display: 'block',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    width: '100%',
+    height: 2,
+    backgroundColor: `${colors.fg}66`,
+  },
+});
 
 export const event_entry = style({
-  backgroundColor: colors.p_g,
+  zIndex: 8, // show above grids of timetable
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   overflow: 'hidden',
   whiteSpace: 'pre-wrap',
+  backgroundColor: colors.p_g,
   border: `2px solid ${colors.fg}`,
 });
 export const tiny_entry = style({

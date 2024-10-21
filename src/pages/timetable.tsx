@@ -30,9 +30,12 @@ function Table(props: {list: TimeTableEntry[]}): JSX.Element {
       {
         // Times; 09:30 == row[2], 10:30 == row[14] (1-indexed)
         [10, 11, 12, 13, 14, 15, 16, 17, 18].map((e, i) => (
-          <div key={e} style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}} className={css.show_hour}>
-            {`${e}:00`}
-          </div>
+          <>
+            <div key={`time_${e}`} style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}} className={css.show_hour}>
+              {`${e}:00`}
+            </div>
+            <div key={`grid_${e}`} style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}} className={css.hour_grid} />
+          </>
         ))
       }
       {props.list.map(e => {

@@ -9,11 +9,13 @@ import {colors} from './theme';
 
 export const container = style({
   paddingTop: 76,
+  paddingBottom: 40,
   textAlign: 'center',
 });
 
 export const heading = style({
   textAlign: 'right',
+  marginBlock: 4,
   paddingRight: 8,
   position: 'relative',
   '::before': {
@@ -27,14 +29,22 @@ export const heading = style({
     backgroundColor: colors.p_r,
   },
 });
+export const misc_schedule = style({
+  display: 'inline-block',
+  padding: '4px 8px',
+  marginBlock: 4,
+  borderRadius: 4,
+  border: `2px solid ${colors.fg}`,
+  backgroundColor: colors.p_g,
+});
 
 export const table = style({
   display: 'grid',
   gap: '4px 8px',
   gridTemplateColumns: 'auto 1fr 1fr',
-  // earliest: 09:30, latest: 18:45 => 15min * _38_
-  // [2(10:00) -> 4(15min * 4=1h) * 8h = 32(18:00) -> 3(18:45)]
-  gridTemplateRows: 'auto repeat(38, 16px)',
+  // earliest: 09:30, latest: 18:45 => 5min * _115_
+  // [6(10:00) -> 12(5min * 12=1h) * 8h = 96(18:00) -> 9(18:45)]
+  gridTemplateRows: 'auto repeat(115, 3px)',
 
   width: 'min(100%, 650px)',
   marginInline: 'auto',
@@ -52,6 +62,9 @@ export const table_top_weather_notice = style({
 });
 export const show_hour = style({
   gridColumn: '1 / 2',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
 });
 
 export const event_entry = style({
@@ -59,12 +72,46 @@ export const event_entry = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  overflow: 'hidden',
+  whiteSpace: 'pre-wrap',
   border: `2px solid ${colors.fg}`,
 });
+export const tiny_entry = style({
+  paddingBottom: 8,
+  display: 'grid',
+  gridTemplate: `
+    "event_name event_name event_name" 1fr
+    "time_begin separator  time_end"   auto / 1fr auto 1fr
+    `,
+  alignItems: 'center',
+  fontSize: '0.72em',
+});
+export const event_name = style({
+  marginBlock: -4,
+  selectors: {
+    [`${tiny_entry} > &`]: {
+      gridArea: 'event_name',
+      marginTop: 0,
+      marginBottom: -8,
+    },
+  },
+});
+export const time_separator = style({
+  display: 'none',
+  selectors: {
+    [`${tiny_entry} > &`]: {
+      display: 'block',
+    },
+  },
+});
+
 /// 第1体育館
 export const primary_gym = style({
   gridColumn: '2 / 3',
 });
 export const main_stage = style({
   gridColumn: '3 / 4',
+});
+export const both = style({
+  gridColumn: '2 / 4',
 });

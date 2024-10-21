@@ -6,16 +6,13 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import * as css from './Countdown.css';
 import React from 'react';
+import {ZeroPadding} from '../utils/ZeroPadding';
 
 type Props = {
   beginning_time?: string;
 };
 
 const jst = 9 /*hours*/ * 60 /*minutes*/ * 60 /*sec*/ * 1000; /*ms*/
-export function ZeroPadding(s: string | number) {
-  const str = String(s);
-  return `${str.length === 1 ? '0' : ''}${str}`;
-}
 
 export function Countdown(props: Props) {
   const beginning = new Date(props.beginning_time ?? '2024-11-09T09:30:00+0900');

@@ -12,6 +12,16 @@ export const container = style({
   paddingBottom: 40,
   textAlign: 'center',
 });
+export const tables_wrapper = style({
+  width: '100%',
+  display: 'grid',
+  '@media': {
+    'screen and (width > 850px)': {
+      gridTemplate: '100% / 1fr 1fr',
+      gap: 40,
+    },
+  },
+});
 
 export const heading = style({
   textAlign: 'right',

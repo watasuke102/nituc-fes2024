@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "gatsby -H 0.0.0.0 develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
     "lint": "tsc --noEmit ; eslint --fix .",
     "new": "scaffdog generate"

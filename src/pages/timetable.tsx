@@ -9,8 +9,9 @@ import React from 'react';
 import cs from 'classnames';
 import {Seo} from '../common/Seo/Seo';
 import {Header} from '../common/Header';
-import {Time, timetable_first, timetable_second, TimeTableEntry} from '../data/timetable';
+import {timetable_first, timetable_second, TimeTableEntry} from '../data/timetable';
 import {ZeroPadding} from '../utils/ZeroPadding';
+import {Time} from '../data/time';
 
 export const Head = (): React.ReactElement => (
   <Seo title_prefix='タイムテーブル' desc='時間ごと・会場ごとのタイムテーブル' url='/timetable' />
@@ -44,12 +45,13 @@ function Table(props: {list: TimeTableEntry[]}): JSX.Element {
             if (t.minute === 30) {
               return 2; // 09:30 is row[2]
             } else {
-              throw Error(`unexpected time : ${ZeroPadding(e.begin.hour)}:${ZeroPadding(e.begin.minute)}`);
+              throw Error(`unexpected time : ${t.toString()}`);
             }
           }
           // 10:00 == row[8], 1 hour == row*12
           return Math.floor(8 + (t.hour - 10) * 12 + t.minute / 5);
         }
+        console.log(`${e.begin}`);
         const begin = row(e.begin);
         const end = row(e.end);
         return (
@@ -65,10 +67,10 @@ function Table(props: {list: TimeTableEntry[]}): JSX.Element {
               end - begin < 12 && css.tiny_entry,
             )}
           >
-            <span>{`${ZeroPadding(e.begin.hour)}:${ZeroPadding(e.begin.minute)}`}</span>
+            <span>{e.begin.toString()}</span>
             <strong className={css.event_name}>{e.name}</strong>
             <strong className={css.time_separator}>～</strong>
-            <span>{`${ZeroPadding(e.end.hour)}:${ZeroPadding(e.end.minute)}`}</span>
+            <span>{e.end.toString()}</span>
           </div>
         );
       })}

@@ -21,3 +21,15 @@ h1 {
   background-color: #cdf76e;
   border-radius: 8px;
 }
+
+ol {
+  list-style-type: decimal-leading-zero;
+  padding-left: 32px;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 32px;
+}

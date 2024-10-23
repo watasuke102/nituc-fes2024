@@ -8,9 +8,9 @@ import {ZeroPadding} from '../utils/ZeroPadding';
 
 export class Time {
   constructor(readonly hour: number, readonly minute: number) {
-    // if (hour > 12 || minute > 60) {
-    //   throw RangeError;
-    // }
+    if (hour > 24 || minute > 60) {
+      throw RangeError;
+    }
   }
   public toString() {
     return `${ZeroPadding(this.hour)}:${ZeroPadding(this.minute)}`;

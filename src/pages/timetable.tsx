@@ -35,20 +35,36 @@ function Table(props: Props): JSX.Element {
       </div>
       {
         // Times; 09:30 == row[2], 10:30 == row[14] (1-indexed)
+        // so 1\d:00 is row[8*12i]; use ±2
         [10, 11, 12, 13, 14, 15, 16, 17, 18].map((e, i) => (
           <>
-            <div
-              key={`time_${e}`}
-              style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}}
+            <strong
+              key={`time_hour_${e}`}
+              style={{gridRow: `${6 + i * 12} / ${10 + i * 12}`}}
               className={css.show_hour}
               aria-hidden
             >
               {`${e}:00`}
-            </div>
+            </strong>
             <div
-              key={`grid_${e}`}
-              style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}}
-              className={css.hour_grid}
+              key={`grid_hour_${e}`}
+              style={{gridRow: `${6 + i * 12} / ${10 + i * 12}`}}
+              className={css.table_grid}
+              role='separator'
+            />
+            {/* 1\d:30 is row[14*12i]; use ±2 */}
+            <span
+              key={`time_mid_${e}`}
+              style={{gridRow: `${12 + i * 12} / ${16 + i * 12}`}}
+              className={css.show_hour}
+              aria-hidden
+            >
+              {`${e}:30`}
+            </span>
+            <div
+              key={`grid_mid_${e}`}
+              style={{gridRow: `${12 + i * 12} / ${16 + i * 12}`}}
+              className={cs(css.table_grid, css.grid_thin)}
               role='separator'
             />
           </>
@@ -81,13 +97,13 @@ function Table(props: Props): JSX.Element {
               </div>
               {props.band_list.map(e => {
                 return (
-                  <div
+                  <strong
                     key={`band_${e.name}`}
                     style={{gridRow: `${row(e.begin)} / ${row(e.end)}`}}
                     className={cs(css.event_entry, css.band_entry)}
                   >
                     {e.name}
-                  </div>
+                  </strong>
                 );
               })}
             </>

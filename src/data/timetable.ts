@@ -6,12 +6,14 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import {Time} from './time';
 
-export interface TimeTableEntry {
+export interface BandEntry {
   readonly begin: Time;
   readonly end: Time;
   readonly name: string;
-  readonly place: 'primary_gym' | 'main_stage' | 'both';
 }
+export type TimeTableEntry = BandEntry & {
+  place: 'primary_gym' | 'main_stage' | 'both';
+};
 
 export const timetable_first: TimeTableEntry[] = [
   {
@@ -96,5 +98,126 @@ export const timetable_second: TimeTableEntry[] = [
     end: new Time(19, 0),
     name: 'エンディング（正門付近）',
     place: 'both',
+  },
+];
+
+export const band_first: BandEntry[] = [
+  {
+    begin: new Time(10, 0),
+    end: new Time(10, 20),
+    name: 'テノナル',
+  },
+  {
+    begin: new Time(10, 30),
+    end: new Time(10, 50),
+    name: 'thee ELLE gun elephant',
+  },
+  {
+    begin: new Time(11, 0),
+    end: new Time(11, 20),
+    name: 'Next Stage',
+  },
+  {
+    begin: new Time(11, 30),
+    end: new Time(11, 50),
+    name: 'スイミンブソク',
+  },
+  {
+    begin: new Time(12, 0),
+    end: new Time(12, 20),
+    name: 'キラキラユー',
+  },
+  {
+    begin: new Time(12, 50),
+    end: new Time(13, 10),
+    name: 'As usual',
+  },
+  {
+    begin: new Time(13, 20),
+    end: new Time(13, 40),
+    name: 'Saucy Dog cover.',
+  },
+  {
+    begin: new Time(13, 50),
+    end: new Time(14, 10),
+    name: 'mic',
+  },
+  {
+    begin: new Time(14, 20),
+    end: new Time(14, 40),
+    name: '特急呪物',
+  },
+  {
+    begin: new Time(14, 50),
+    end: new Time(15, 10),
+    name: '泡沫シアン',
+  },
+  {
+    begin: new Time(15, 20),
+    end: new Time(15, 40),
+    name: 'The Humble Cats',
+  },
+  {
+    begin: new Time(15, 50),
+    end: new Time(16, 15),
+    name: 'Xe-キセノン-',
+  },
+];
+
+export const band_second: BandEntry[] = [
+  {
+    begin: new Time(10, 0),
+    end: new Time(10, 20),
+    name: '鼻先ティラミス',
+  },
+  {
+    begin: new Time(10, 30),
+    end: new Time(10, 50),
+    name: 'Go with the flow',
+  },
+  {
+    begin: new Time(11, 0),
+    end: new Time(11, 20),
+    name: 'Oasis',
+  },
+  {
+    begin: new Time(11, 30),
+    end: new Time(11, 45),
+    name: '凸凹フレンズ',
+  },
+  {
+    begin: new Time(11, 55),
+    end: new Time(12, 15),
+    name: 'Eat my honEy',
+  },
+  {
+    begin: new Time(12, 45),
+    end: new Time(13, 5),
+    name: 'looser',
+  },
+  {
+    begin: new Time(13, 15),
+    end: new Time(13, 35),
+    name: 'ベイブ',
+  },
+  {
+    begin: new Time(13, 45),
+    end: new Time(14, 5),
+    name: 'コレザワ',
+  },
+  {
+    begin: new Time(14, 15),
+    end: new Time(14, 35),
+    name: 'mistero',
+  },
+  {
+    begin: new Time(14, 45),
+    end: new Time(15, 5),
+    name: 'コピシカ',
+  },
+  {
+    begin: new Time(15, 15),
+    end: new Time(15, 45),
+    name: 'わたしたち',
   },
 ];

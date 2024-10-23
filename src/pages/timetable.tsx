@@ -9,36 +9,52 @@ import React from 'react';
 import cs from 'classnames';
 import {Seo} from '../common/Seo/Seo';
 import {Header} from '../common/Header';
-import {timetable_first, timetable_second, TimeTableEntry} from '../data/timetable';
+import {band_first, band_second, BandEntry, timetable_first, timetable_second, TimeTableEntry} from '../data/timetable';
 import {Time} from '../data/time';
 
 export const Head = (): React.ReactElement => (
   <Seo title_prefix='タイムテーブル' desc='時間ごと・会場ごとのタイムテーブル' url='/timetable' />
 );
 
-function Table(props: {list: TimeTableEntry[]}): JSX.Element {
+interface Props {
+  event_list: TimeTableEntry[];
+  band_list: BandEntry[];
+}
+function Table(props: Props): JSX.Element {
   return (
     <div className={css.table}>
       {/* Header */}
-      <div className={cs(css.table_top, css.primary_gym)}>
+      <div className={cs(css.table_top, css.primary_gym)} aria-hidden>
         <strong>第1体育館</strong>
       </div>
-      <div className={cs(css.table_top, css.main_stage)}>
+      <div className={cs(css.table_top, css.main_stage)} aria-hidden>
         <strong>メインステージ</strong>
-        <span className={css.table_top_weather_notice}>(雨天時：第2体育館)</span>
+        <span className={css.table_top_weather_notice} aria-hidden>
+          (雨天時：第2体育館)
+        </span>
       </div>
       {
         // Times; 09:30 == row[2], 10:30 == row[14] (1-indexed)
         [10, 11, 12, 13, 14, 15, 16, 17, 18].map((e, i) => (
           <>
-            <div key={`time_${e}`} style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}} className={css.show_hour}>
+            <div
+              key={`time_${e}`}
+              style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}}
+              className={css.show_hour}
+              aria-hidden
+            >
               {`${e}:00`}
             </div>
-            <div key={`grid_${e}`} style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}} className={css.hour_grid} />
+            <div
+              key={`grid_${e}`}
+              style={{gridRow: `${2 + i * 12} / ${14 + i * 12}`}}
+              className={css.hour_grid}
+              role='separator'
+            />
           </>
         ))
       }
-      {props.list.map(e => {
+      {props.event_list.map(e => {
         function row(t: Time) {
           if (t.hour === 9) {
             if (t.minute === 30) {
@@ -50,9 +66,34 @@ function Table(props: {list: TimeTableEntry[]}): JSX.Element {
           // 10:00 == row[8], 1 hour == row*12
           return Math.floor(8 + (t.hour - 10) * 12 + t.minute / 5);
         }
-        console.log(`${e.begin}`);
         const begin = row(e.begin);
         const end = row(e.end);
+
+        if (e.name === 'バンド') {
+          return (
+            <>
+              <div
+                key={'band_head'}
+                style={{gridRow: `${begin} / ${end}`}}
+                className={cs(css.event_entry, css.band_head)}
+              >
+                バンド
+              </div>
+              {props.band_list.map(e => {
+                return (
+                  <div
+                    key={`band_${e.name}`}
+                    style={{gridRow: `${row(e.begin)} / ${row(e.end)}`}}
+                    className={cs(css.event_entry, css.band_entry)}
+                  >
+                    {e.name}
+                  </div>
+                );
+              })}
+            </>
+          );
+        }
+
         return (
           <div
             key={e.name}
@@ -91,7 +132,7 @@ export default function Timetable(): JSX.Element {
             <span className={css.misc_schedule}>
               (工学実験・展示・バザー：<strong>09:30～16:30</strong>)
             </span>
-            <Table list={timetable_first} />
+            <Table event_list={timetable_first} band_list={band_first} />
           </section>
           <section>
             <div className={css.heading_wrapper}>
@@ -100,7 +141,7 @@ export default function Timetable(): JSX.Element {
             <span className={css.misc_schedule}>
               (工学実験・展示・バザー：<strong>09:30～15:00</strong>)
             </span>
-            <Table list={timetable_second} />
+            <Table event_list={timetable_second} band_list={band_second} />
           </section>
         </div>
       </main>

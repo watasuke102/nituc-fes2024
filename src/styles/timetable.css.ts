@@ -58,7 +58,7 @@ export const misc_schedule = style({
 export const table = style({
   display: 'grid',
   gap: '4px 8px',
-  gridTemplateColumns: 'auto 1fr 1fr',
+  gridTemplateColumns: 'auto auto 1fr auto 1fr',
   // earliest: 09:30, latest: 18:45 => 5min * _115_
   // [6(10:00) -> 12(5min * 12=1h) * 8h = 96(18:00) -> 9(18:45)]
   gridTemplateRows: 'auto repeat(115, 3px)',
@@ -84,7 +84,7 @@ export const show_hour = style({
   justifyContent: 'center',
 });
 export const hour_grid = style({
-  gridColumn: '2 / 4',
+  gridColumn: '2 / 6',
   position: 'relative',
   '::before': {
     content: '',
@@ -139,11 +139,20 @@ export const time_separator = style({
 
 /// 第1体育館
 export const primary_gym = style({
-  gridColumn: '2 / 3',
+  gridColumn: '2 / 4',
 });
 export const main_stage = style({
-  gridColumn: '3 / 4',
+  gridColumn: '4 / 6',
 });
 export const both = style({
-  gridColumn: '2 / 4',
+  gridColumn: '2 / 6',
+});
+
+export const band_head = style({
+  gridColumn: '2 / 3',
+  writingMode: 'vertical-rl',
+});
+export const band_entry = style({
+  gridColumn: '3 / 4',
+  fontSize: '0.77em',
 });

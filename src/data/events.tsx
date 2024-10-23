@@ -10,8 +10,7 @@ import React from 'react';
 export interface EventDetail {
   readonly title: string;
   readonly date: string;
-  // main stage is varied on the rainy day
-  readonly place?: 'main_stage' | string;
+  readonly place?: string;
   readonly by?: string;
   readonly desc: JSX.Element;
 }
@@ -28,6 +27,12 @@ function date(day: 1 | 2, begin?: Time, end?: Time): string {
 }
 
 export const events: EventDetail[] = [
+  {
+    title: 'オープニング',
+    date: date(1, new Time(9, 30)),
+    place: '正門付近',
+    desc: <span>風船をみんなで飛ばしましょう！参加してくれた方にはお菓子やジュースをお渡しします</span>,
+  },
   {
     title: '映えコン',
     date: 'オープニングから2日目の午前中まで',
@@ -51,7 +56,7 @@ export const events: EventDetail[] = [
   {
     title: 'カラオケ大会',
     date: `予選：${date(1, new Time(11, 30))}\n決勝：${date(2, new Time(12, 0))}`,
-    place: 'main_stage',
+    place: 'メインステージ',
     desc: (
       <span>
         歌唱力を魅せつけろ。
@@ -63,7 +68,7 @@ export const events: EventDetail[] = [
   {
     title: 'ビンゴ大会',
     date: date(1, new Time(10, 0)),
-    place: 'main_stage',
+    place: 'メインステージ',
     desc: (
       <span>
         運試し、やっていきませんか？
@@ -132,7 +137,7 @@ export const events: EventDetail[] = [
   {
     title: '○×クイズ大会',
     date: date(2, new Time(10, 0)),
-    place: 'main_stage',
+    place: 'メインステージ',
     desc: (
       <span>
         クイズ王は誰だ？様々なジャンルのクイズを出題します。
@@ -153,5 +158,17 @@ export const events: EventDetail[] = [
     date: `前半：${date(2, new Time(16, 0))}\n後半：${date(2, new Time(17, 20))}`,
     place: '第1体育館',
     desc: <span>50人に景品が当たる！！豪華景品をゲットしよう！</span>,
+  },
+  {
+    title: 'エンディング',
+    date: date(2, new Time(18, 10)),
+    place: '正門付近',
+    desc: (
+      <span>
+        光る風船が飛びます！エンディング動画も流れます！！
+        <br />
+        抽選会が終わったら正門付近に集合してください。
+      </span>
+    ),
   },
 ];

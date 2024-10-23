@@ -60,10 +60,6 @@ export const group_icon = style({
 export const by = style({
   gridArea: 'by',
 });
-export const place_weather_notice = style({
-  display: 'inline-block',
-  fontSize: '0.8em',
-});
 export const desc = style({
   marginTop: 'auto',
 });

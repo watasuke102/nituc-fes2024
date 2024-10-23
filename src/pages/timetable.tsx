@@ -68,8 +68,8 @@ function Table(props: Props): JSX.Element {
       </div>
       <div className={cs(css.table_top, css.main_stage)} aria-hidden>
         <strong>メインステージ</strong>
-        <span className={css.table_top_weather_notice} aria-hidden>
-          (雨天時：第2体育館)
+        <span className={css.explicit_place_info} aria-hidden>
+          (第2体育館)
         </span>
       </div>
       {

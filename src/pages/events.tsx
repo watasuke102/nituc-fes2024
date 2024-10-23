@@ -32,15 +32,7 @@ export default function Events(): JSX.Element {
                   {e.place && (
                     <>
                       <img className={css.place_icon} src={PlaceIcon} loading='eager' alt='' />
-                      <span className={css.place}>
-                        {e.place === 'main_stage' ? (
-                          <>
-                            メインステージ<span className={css.place_weather_notice}>（雨天時：第2体育館）</span>
-                          </>
-                        ) : (
-                          <>{e.place}</>
-                        )}
-                      </span>
+                      <span className={css.place}>{e.place}</span>
                     </>
                   )}
                   {e.by && (

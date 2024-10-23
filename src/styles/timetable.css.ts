@@ -72,7 +72,7 @@ export const table_top = style({
   display: 'flex',
   flexDirection: 'column',
 });
-export const table_top_weather_notice = style({
+export const explicit_place_info = style({
   display: 'block',
   marginTop: -7,
   fontSize: '0.85em',

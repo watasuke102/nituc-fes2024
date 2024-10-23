@@ -6,7 +6,7 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import * as css from './Countdown.css';
 import React from 'react';
-import {ZeroPadding} from '../utils/ZeroPadding';
+import {ZeroPadding} from '../../utils/ZeroPadding';
 
 type Props = {
   beginning_time?: string;

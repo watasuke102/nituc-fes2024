@@ -10,7 +10,6 @@ import cs from 'classnames';
 import {Seo} from '../common/Seo/Seo';
 import {Header} from '../common/Header';
 import {timetable_first, timetable_second, TimeTableEntry} from '../data/timetable';
-import {ZeroPadding} from '../utils/ZeroPadding';
 import {Time} from '../data/time';
 
 export const Head = (): React.ReactElement => (

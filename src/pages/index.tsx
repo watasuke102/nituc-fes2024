@@ -7,7 +7,7 @@
 import * as css from '../styles/top.css';
 import React from 'react';
 import {Seo} from '../common/Seo/Seo';
-import {Countdown} from '../features';
+import {Countdown} from '../features/Countdown';
 import {Header} from '../common/Header';
 
 export const Head = (): React.ReactElement => (

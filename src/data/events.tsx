@@ -152,6 +152,6 @@ export const events: EventDetail[] = [
     title: '抽選会',
     date: `前半：${date(2, new Time(16, 0))}\n後半：${date(2, new Time(17, 20))}`,
     place: '第1体育館',
-    desc: <span></span>,
+    desc: <span>50人に景品が当たる！！豪華景品をゲットしよう！</span>,
   },
 ];

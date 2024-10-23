@@ -6,7 +6,7 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import * as css from '../styles/map.css';
 import React from 'react';
-import map from '/static/map.svg';
+import map from '/static/map/map_basic.svg';
 import {Seo} from '../common/Seo/Seo';
 import {ScrollContainer} from '../common/ScrollContainer';
 import {Header} from '../common/Header';

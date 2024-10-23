@@ -16,6 +16,45 @@ export const Head = (): React.ReactElement => (
   <Seo title_prefix='タイムテーブル' desc='時間ごと・会場ごとのタイムテーブル' url='/timetable' />
 );
 
+function event_label(e: TimeTableEntry): string {
+  let label = e.begin.toString();
+  label += 'から';
+  label += e.end.toString();
+  label += 'まで、';
+  switch (e.place) {
+    case 'primary_gym':
+      label += '第1体育館';
+      break;
+    case 'main_stage':
+      label += 'メインステージ';
+      break;
+    case 'both':
+      label += '正門付近';
+      break;
+  }
+  label += 'で「' + e.name + '」を開催します。';
+  return label;
+}
+function band_label(e: BandEntry): string {
+  let label = e.begin.toString();
+  label += 'から';
+  label += e.end.toString();
+  label += 'まで、第1体育館で「' + e.name + '」によるバンド演奏が行われます。';
+  return label;
+}
+
+function row(t: Time): number {
+  if (t.hour === 9) {
+    if (t.minute === 30) {
+      return 2; // 09:30 is row[2]
+    } else {
+      throw Error(`unexpected time : ${t.toString()}`);
+    }
+  }
+  // 10:00 == row[8], 1 hour == row*12
+  return Math.floor(8 + (t.hour - 10) * 12 + t.minute / 5);
+}
+
 interface Props {
   event_list: TimeTableEntry[];
   band_list: BandEntry[];
@@ -71,17 +110,6 @@ function Table(props: Props): JSX.Element {
         ))
       }
       {props.event_list.map(e => {
-        function row(t: Time) {
-          if (t.hour === 9) {
-            if (t.minute === 30) {
-              return 2; // 09:30 is row[2]
-            } else {
-              throw Error(`unexpected time : ${t.toString()}`);
-            }
-          }
-          // 10:00 == row[8], 1 hour == row*12
-          return Math.floor(8 + (t.hour - 10) * 12 + t.minute / 5);
-        }
         const begin = row(e.begin);
         const end = row(e.end);
 
@@ -92,18 +120,20 @@ function Table(props: Props): JSX.Element {
                 key={'band_head'}
                 style={{gridRow: `${begin} / ${end}`}}
                 className={cs(css.event_entry, css.band_head)}
+                aria-hidden
               >
                 バンド
               </div>
               {props.band_list.map(e => {
                 return (
-                  <strong
+                  <div
                     key={`band_${e.name}`}
                     style={{gridRow: `${row(e.begin)} / ${row(e.end)}`}}
                     className={cs(css.event_entry, css.band_entry)}
                   >
-                    {e.name}
-                  </strong>
+                    <strong aria-hidden>{e.name}</strong>
+                    <span className={css.visually_hidden}>{band_label(e)}</span>
+                  </div>
                 );
               })}
             </>
@@ -123,10 +153,15 @@ function Table(props: Props): JSX.Element {
               end - begin < 12 && css.tiny_entry,
             )}
           >
-            <span>{e.begin.toString()}</span>
-            <strong className={css.event_name}>{e.name}</strong>
-            <strong className={css.time_separator}>～</strong>
-            <span>{e.end.toString()}</span>
+            <span aria-hidden>{e.begin.toString()}</span>
+            <strong className={css.event_name} aria-hidden>
+              {e.name}
+            </strong>
+            <strong className={css.time_separator} aria-hidden>
+              ～
+            </strong>
+            <span aria-hidden>{e.end.toString()}</span>
+            <span className={css.visually_hidden}>{event_label(e)}</span>
           </div>
         );
       })}

@@ -142,6 +142,16 @@ export const time_separator = style({
     },
   },
 });
+export const visually_hidden = style({
+  position: 'absolute',
+  display: 'inline-block',
+  width: 1,
+  height: 1,
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  clip: 'rect(0,0,0,0)',
+  clipPath: 'inset(50%)',
+});
 
 /// 第1体育館
 export const primary_gym = style({

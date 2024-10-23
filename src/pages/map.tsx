@@ -24,9 +24,16 @@ export default function Map(): JSX.Element {
       </ScrollContainer>
       <h2>アクセス</h2>
       <p>
-        <strong>〒755-8555 山口県宇部市常盤台2-14-1</strong>
+        会場：
+        <strong>
+          <a target='_blank' rel='nofollow noopener noreferrer' href='https://www.ube-k.ac.jp/'>
+            宇部工業高等専門学校
+          </a>
+        </strong>
+        <br />
+        〒755-8555 山口県宇部市常盤台2-14-1
       </p>
-      <p>※駐車場はありません。外部参加の方は、公共交通機関のご利用をお願いします。</p>
+      <p className={css.parking_notice}>※駐車場はありません。外部参加の方は、公共交通機関のご利用をお願いします。</p>
       <div className={css.access_container}>
         <iframe
           title='宇部高専マップ'

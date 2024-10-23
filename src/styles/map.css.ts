@@ -13,6 +13,10 @@ export const container = style({
 export const map = style({
   height: 400,
 });
+
+export const parking_notice = style({
+  fontSize: '0.85em',
+});
 export const access_container = style({
   display: 'grid',
   gridTemplateRows: '1fr auto',

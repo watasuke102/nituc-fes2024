@@ -19,6 +19,9 @@ const compat = new FlatCompat({
   baseDirectory: path.dirname(fileURLToPath(import.meta.url)),
 });
 
+// https://github.com/Stuk/eslint-plugin-header/issues/57#issuecomment-2378485611
+header.rules.header.meta.schema = false;
+
 export default tseslint.config(
   {
     plugins: {
@@ -36,6 +39,7 @@ export default tseslint.config(
           ' Twitter: @Watasuke102',
           ' This software is released under the MIT or MIT SUSHI-WARE License.',
         ],
+        1, // new line count
       ],
     },
   },

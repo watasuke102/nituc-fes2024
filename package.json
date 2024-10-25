@@ -16,29 +16,29 @@
     "new": "scaffdog generate"
   },
   "dependencies": {
-    "@vanilla-extract/css": "^1.15.5",
-    "@vanilla-extract/webpack-plugin": "^2.3.13",
+    "@vanilla-extract/css": "^1.16.0",
+    "@vanilla-extract/webpack-plugin": "^2.3.14",
     "classnames": "^2.5.1",
     "gatsby": "^5.13.7",
     "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-plugin-vanilla-extract": "^4.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.1.1",
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "eslint": "^8.57.1",
+    "@eslint/compat": "^1.2.1",
+    "@types/node": "^22.7.9",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.13.0",
     "eslint-plugin-header": "^3.1.1",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.1",
+    "eslint-plugin-react": "^7.37.2",
     "scaffdog": "^4.1.0",
-    "typescript": "^5.3.3",
-    "typescript-eslint": "^8.6.0"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0"
   }
 }

@@ -4,8 +4,8 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
-import {Time} from './time';
 import React from 'react';
+import {Time} from './time';
 
 export interface EventDetail {
   readonly title: string;

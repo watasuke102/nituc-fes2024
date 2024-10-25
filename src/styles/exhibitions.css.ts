@@ -15,6 +15,7 @@ export const container = style({
 
 export const table = style({
   margin: '8px 12px',
+  justifySelf: 'center',
   border: `3px solid ${colors.fg}`,
   borderSpacing: '0',
   borderCollapse: 'collapse',

@@ -9,7 +9,7 @@ import React from 'react';
 import cs from 'classnames';
 import {Seo} from '../common/Seo/Seo';
 import {Header} from '../common/Header';
-import {BazaarMap} from '../features/BazaarMap';
+import {BazaarMap} from '../features/Map';
 import {bazaar, ExhibitInfo} from '../data/exhibitions';
 import {ScrollContainer} from '../common/ScrollContainer';
 

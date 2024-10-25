@@ -45,7 +45,7 @@ export const css = {
   }),
 };
 
-globalStyle(`${css.container}>img`, {
+globalStyle(`${css.container} img, ${css.container} svg`, {
   margin: 'auto',
   overflowX: 'clip',
   maxWidth: 'none !important',

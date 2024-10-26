@@ -4,6 +4,7 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
-import { BazaarMap } from './BazaarMap';
+import {BazaarMap} from './BazaarMap';
+import {ExhibitsMap} from './ExhibitsMap';
 
-export { BazaarMap };
+export {BazaarMap, ExhibitsMap};

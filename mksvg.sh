@@ -16,4 +16,4 @@ if ! command -v $SVGCLEANER 2>&1 > /dev/null; then
 fi
 
 # stroke-(line.*|width) -> stroke(Line.*|Width) && enable-background -> enableBackground
-$SVGCLEANER -c --quiet $1 | sed -E 's/stroke-l/strokeL/g; s/stroke-w/strokeW/g; s/enable-b/enableB/g'
+$SVGCLEANER -c --quiet $1 | sed -E 's/stroke-l/strokeL/g; s/stroke-w/strokeW/g; s/enable-b/enableB/g; s/(width|height)="[0-9]*"//g; s/<svg/<svg className={css.map}/'

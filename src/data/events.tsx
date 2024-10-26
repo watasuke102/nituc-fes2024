@@ -80,7 +80,7 @@ export const events: EventDetail[] = [
   {
     title: '献血',
     date: date(1) + ' 09:30～12:00 / 13:15～16:00',
-    place: 'ペリカン食堂',
+    place: 'ペリカン食堂（学生会館 1F）',
     desc: (
       <div>
         <span>

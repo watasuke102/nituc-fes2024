@@ -9,8 +9,8 @@ import React from 'react';
 import cs from 'classnames';
 import {Seo} from '../common/Seo/Seo';
 import {Header} from '../common/Header';
-import {BazaarMap} from '../features/Map';
-import {bazaar, ExhibitInfo} from '../data/exhibitions';
+import {BazaarMap, ExhibitsMap} from '../features/Map';
+import {bazaar, ExhibitInfo, exhibits} from '../data/exhibitions';
 import {ScrollContainer} from '../common/ScrollContainer';
 
 export const Head = (): React.ReactElement => <Seo title_prefix='展示・バザー' desc='' url='/exhibitions' />;
@@ -52,6 +52,11 @@ export default function Exhibitions(): JSX.Element {
           <h2>バザー</h2>
           <BazaarMap />
           <ExhibitTable info={bazaar} />
+        </section>
+        <section>
+          <h2>展示</h2>
+          <ExhibitsMap />
+          <ExhibitTable info={exhibits} />
         </section>
       </main>
     </>

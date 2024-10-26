@@ -34,3 +34,23 @@ export const bazaar: ExhibitInfo[] = [
   {place: '㉑', org: '3S', desc: 'USA café アメリカンダイナー'},
   {place: '㉒', org: '茶道部', desc: 'お茶、和菓子'},
 ];
+
+export const exhibits: ExhibitInfo[] = [
+  {place: '①', org: 'ロボット研究部', desc: 'ロボットの展示、ミニゲーム'},
+  {place: '②', org: '傑作技研', desc: '制作物展示'},
+  {place: '③', org: '献血', desc: '献血の実施'},
+  {place: '④', org: '写真部', desc: '写真展示、ポストカード販売'},
+  {place: '⑤', org: '美術部', desc: '作品展示、ポストカード販売'},
+  {place: '⑥', org: '文芸部', desc: '部誌の配布'},
+  {place: '⑦', org: '平成フォトスタジオ', desc: '服飾・小物の展示'},
+  {place: '⑧', org: 'ETロボコン', desc: '活動内容の展示'},
+  {place: '⑨', org: 'Eプロジェクト', desc: '電気工学科の自主活動グループの活動紹介'},
+  {place: '⑩', org: 'コンピューター部', desc: '制作物展示'},
+  {place: '⑪', org: '篠田研究室', desc: 'キーホルダー作り'},
+  {place: '⑫', org: '野球部', desc: '服の販売'},
+  {place: '⑬', org: '機械工学科', desc: '船が進む仕組みを体験を通して学ぶ'},
+  {place: '⑭', org: '電気工学科', desc: 'アトラクション（ストラックアウト、VRゲーム等）、展示'},
+  {place: '⑮', org: '制御工学科', desc: 'スイカゲームを通してセンサ入力の体験'},
+  {place: '⑯', org: '物質工学科', desc: '演示、体験、展示'},
+  {place: '⑰', org: '宇部しらとり会', desc: 'ホームカミングデイ'},
+];

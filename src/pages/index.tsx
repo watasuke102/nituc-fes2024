@@ -73,6 +73,7 @@ export default function Index(): React.ReactElement {
             <h3 className={css.heading}>開催日</h3>
             <p>
               2024年<strong>11月09日 (土), 10日 (日)</strong>
+              <br />
               <Link to='/timetable'>タイムテーブルを見る</Link>
             </p>
             <h3 className={css.heading}>実施場所</h3>
@@ -98,7 +99,7 @@ export default function Index(): React.ReactElement {
               <img className={css.nav_card_img} alt='' src='/top/exhibits.jpg' loading='lazy' decoding='async' />
               <div className={css.nav_card_info}>
                 <h3>展示・バザー</h3>
-                <p>バザー、各部活動による展示、各学科による工学実験が盛り沢山！</p>
+                <p>バザー、各部活動による展示、各学科による工学実験など盛り沢山！</p>
                 <Link to='/exhibitions'>詳しく見る</Link>
               </div>
             </div>

@@ -19,10 +19,11 @@ export const times = style({
   fontSize: '1.15em',
 });
 export const num = style({
-  width: 40,
+  width: 44,
   margin: '0 6px',
   fontWeight: 'bold',
   fontSize: '1.8em',
+  wordBreak: 'keep-all',
 });
 export const announce = style({
   fontWeight: 'bold',

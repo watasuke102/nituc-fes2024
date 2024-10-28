@@ -116,6 +116,7 @@ export const article_list = style({
   padding: '4px 8px',
   border: `2px solid ${colors.fg}`,
   borderRadius: 4,
+  wordBreak: 'break-word',
 });
 export const article_item = style({
   display: 'grid',

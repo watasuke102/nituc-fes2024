@@ -2,7 +2,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
-  word-break: auto-phrase;
+  word-break: break-word;
 }
 
 @media (prefers-reduced-motion: reduce) {

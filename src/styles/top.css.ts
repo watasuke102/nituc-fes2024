@@ -90,11 +90,19 @@ export const info_container = style({
   animation: `${info_fadein} 1s linear 2.7s forwards`,
 });
 
+const scroll_prompt_blink = keyframes({
+  '0%': {opacity: 1},
+  '20%': {opacity: 1},
+  '60%': {opacity: 0.5},
+  '100%': {opacity: 1},
+});
 export const scroll_prompt = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  animation: `${scroll_prompt_blink} 5s linear infinite`,
 });
+
 export const extra_info = style({
   paddingInline: 12,
   paddingTop: 8,

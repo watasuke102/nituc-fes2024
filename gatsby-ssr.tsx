@@ -11,7 +11,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({setHtmlAttributes, setH
   setHtmlAttributes({lang: 'ja'});
   setHeadComponents([
     <link key='reset.css' rel='stylesheet' href='https://unpkg.com/@acab/reset.css@0.10.0/index.css' />,
-    <link key='main' rel='stylesheet' href='main.css' />,
+    <link key='main' rel='stylesheet' href='/main.css' />,
     <link key='pre-googleapis' rel='preconnect' href='https://fonts.googleapis.com' />,
     <link key='pre-gstatic' rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />,
     <link

@@ -58,8 +58,11 @@ export default function Index(): React.ReactElement {
           <section>
             <h2 className={css.heading}>お知らせ</h2>
             <div className={css.article_list}>
-              <ArticleItem date='2024-10-31' path='undefined' title='placeholder' />
-              <ArticleItem date='2024-10-31' path='undefined' title='1234567890 1234567890 1234567890 1234567890' />
+              <ArticleItem
+                date='2024-10-25'
+                path='pr-yamaguchi-cable-vision'
+                title='山口ケーブルテレビジョンでPRを行いました'
+              />
               {/* (TBA) */}
             </div>
           </section>

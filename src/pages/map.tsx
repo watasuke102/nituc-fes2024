@@ -22,7 +22,7 @@ export default function Map(): JSX.Element {
       <ScrollContainer>
         <img className={css.map} alt='場内マップ' src={map} />
       </ScrollContainer>
-      <h2>アクセス</h2>
+      <h2 id='access'>アクセス</h2>
       <p>
         会場：
         <strong>

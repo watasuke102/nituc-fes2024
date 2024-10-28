@@ -2,6 +2,18 @@
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
+  word-break: auto-phrase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
 }
 
 html {
@@ -32,4 +44,9 @@ dt {
 }
 dd {
   margin-left: 32px;
+}
+
+hr {
+  opacity: 1;
+  margin-block: 16px;
 }

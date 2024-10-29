@@ -25,8 +25,10 @@ export const css = {
     },
   }),
   prompt: style({
+    display: 'none',
     '@media': {
       'screen and (width <= 850px)': {
+        display: 'block',
         position: 'absolute',
         left: '50%',
         top: '50%',
@@ -43,7 +45,7 @@ export const css = {
         animationIterationCount: 3,
       },
     },
-  })
+  }),
 };
 
 globalStyle(`${css.container} img, ${css.container} svg`, {

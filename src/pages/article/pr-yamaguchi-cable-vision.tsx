@@ -32,7 +32,9 @@ export default function PrYamaguchiCableVision(): JSX.Element {
             緊張しましたが、2人ともとても頑張りました。 高専祭までもう少し、みなさんで盛り上がっていきましょう！
           </p>
         </article>
-        <LinkButton to='/'>戻る</LinkButton>
+        <div className={css.goback}>
+          <LinkButton to='/'>トップページに戻る</LinkButton>
+        </div>
       </main>
     </>
   );

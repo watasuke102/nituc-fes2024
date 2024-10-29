@@ -23,3 +23,8 @@ export const back_link = style({
   marginBlock: 24,
   textAlign: 'center',
 });
+
+export const goback = style({
+  display: 'flex',
+  justifyContent: 'center',
+});

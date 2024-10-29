@@ -12,5 +12,12 @@ type Props = {
 };
 
 export function ScrollContainer(props: Props): JSX.Element {
-  return <div className={css.container}>{props.children}</div>;
+  return <div className={css.container}>
+    <div className={css.scroll_area}>
+      {props.children}
+    </div>
+    <div className={css.notifier}>
+      Scroll →
+    </div>
+  </div>;
 }

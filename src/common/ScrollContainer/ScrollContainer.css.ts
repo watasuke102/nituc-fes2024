@@ -17,32 +17,33 @@ export const css = {
   container: style({
     position: 'relative',
     textAlign: 'center',
+  }),
+  scroll_area: style({
     overflowX: 'scroll',
     '::-webkit-scrollbar': {
       display: 'none',
     },
+  }),
+  notifier: style({
     '@media': {
-      'screen and (max-width: 850px)': {
-        '::after': {
-          content: 'Scroll →',
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          padding: 32,
-          borderRadius: 8,
-          fontSize: '1.4em',
-          fontWeight: 'bold',
-          color: colors.fg,
-          backgroundColor: `${colors.p_g}dd`,
-          animation: blink,
-          animationDuration: '2s',
-          animationFillMode: 'forwards',
-          animationIterationCount: 3,
-        },
+      'screen and (width <= 850px)': {
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-50%, -50%)',
+        padding: 32,
+        borderRadius: 8,
+        fontSize: '1.4em',
+        fontWeight: 'bold',
+        color: colors.fg,
+        backgroundColor: `${colors.p_g}dd`,
+        animation: blink,
+        animationDuration: '2s',
+        animationFillMode: 'forwards',
+        animationIterationCount: 3,
       },
     },
-  }),
+  })
 };
 
 globalStyle(`${css.container} img, ${css.container} svg`, {

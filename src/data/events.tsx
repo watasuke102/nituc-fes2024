@@ -31,7 +31,13 @@ export const events: EventDetail[] = [
     title: 'オープニング',
     date: date(1, new Time(9, 30)),
     place: '正門付近',
-    desc: <span>風船をみんなで飛ばしましょう！参加してくれた方にはお菓子やジュースをお渡しします</span>,
+    desc: (
+      <span>
+        風船をみんなで飛ばしましょう！風船を飛ばしてくれた方には、プレゼントがあります！ 一般の方も参加できます！
+        <br />
+        （先着200～300名まで）
+      </span>
+    ),
   },
   {
     title: '映えコン',
@@ -157,7 +163,13 @@ export const events: EventDetail[] = [
     title: '抽選会',
     date: `前半：${date(2, new Time(16, 0))}\n後半：${date(2, new Time(17, 20))}`,
     place: '第1体育館',
-    desc: <span>50人に景品が当たる！！豪華景品をゲットしよう！</span>,
+    desc: (
+      <span>
+        50人に景品が当たる！！豪華景品をゲットしよう！
+        <br />
+        抽選会の受付はメインステージ（第2体育館）で行います。
+      </span>
+    ),
   },
   {
     title: 'エンディング',

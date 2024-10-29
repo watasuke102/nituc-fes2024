@@ -20,16 +20,35 @@ export const Head = (): React.ReactElement => (
 interface ArticleItemProps {
   date: string; // RFC8601 (YYYY-MM-DD)
   title: string;
-  path: string; // `/article/${props.path}`
+  path?: string; // `/article/${props.path}`
 }
 function ArticleItem(props: ArticleItemProps): JSX.Element {
+  if (props.path) {
+    return (
+      <Link to={`/article/${props.path}`} className={css.article_item}>
+        <span>{props.date}</span>
+        <span>{props.title}</span>
+      </Link>
+    );
+  }
   return (
-    <Link to={`/article/${props.path}`} className={css.article_item}>
+    <p className={css.article_item}>
       <span>{props.date}</span>
       <span>{props.title}</span>
-    </Link>
+    </p>
   );
 }
+const articles: ArticleItemProps[] = [
+  {
+    date: '2024-10-29',
+    title: 'Webサイトの完全版を公開しました！',
+  },
+  {
+    date: '2024-10-25',
+    path: 'pr-yamaguchi-cable-vision',
+    title: '山口ケーブルテレビジョンでPRを行いました',
+  },
+];
 
 export default function Index(): React.ReactElement {
   // :)
@@ -69,11 +88,9 @@ $ made by @Watasuke102. https://watasuke.net をよろしくおねがいしま�
           <section>
             <h2 className={css.heading}>お知らせ</h2>
             <div className={css.article_list}>
-              <ArticleItem
-                date='2024-10-25'
-                path='pr-yamaguchi-cable-vision'
-                title='山口ケーブルテレビジョンでPRを行いました'
-              />
+              {articles.map((e, i) => {
+                return <ArticleItem key={`article_${i}`} {...e} />;
+              })}
             </div>
           </section>
           <section>

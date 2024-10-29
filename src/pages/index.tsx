@@ -32,6 +32,13 @@ function ArticleItem(props: ArticleItemProps): JSX.Element {
 }
 
 export default function Index(): React.ReactElement {
+  // :)
+  console.info(`ようこそ：コンソールを覗きたくなる気持ち、わかりますよ
+---
+このサイトは Gatsby, vanilla-extract, Prettier, ESLint (w/Flat Config) 等と VSCode+VSCodeVim によって作られ、Cloudflare Pages にデプロイされています。
+しばらくしたらGitHubでソースを公開します -> https://github.com/watasuke102/nituc-fes2024
+---
+$ made by @Watasuke102. https://watasuke.net をよろしくおねがいします`);
   return (
     <>
       <Header />

@@ -4,8 +4,8 @@
 // Email  : <watasuke102@gmail.com>
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
-import {Link} from 'gatsby';
 import * as css from './LinkButton.css';
+import {Link} from 'gatsby';
 import React from 'react';
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
 export function LinkButton(props: Props): JSX.Element {
   return (
     <Link className={css.link} to={props.to}>
-      {props.children}
+      <span className={css.text}>{props.children}</span>
     </Link>
   );
 }

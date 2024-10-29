@@ -24,7 +24,7 @@ export const css = {
       display: 'none',
     },
   }),
-  notifier: style({
+  prompt: style({
     '@media': {
       'screen and (width <= 850px)': {
         position: 'absolute',

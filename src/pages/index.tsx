@@ -39,23 +39,26 @@ export default function Index(): React.ReactElement {
         <div className={css.entrypoint_wrapper}>
           <div className={css.entrypoint_bg} />
           <div className={css.entrypoint_circle}>
-            <h1 className={css.entrypoint_title}>宇部高専 第61回高専祭</h1>
+            <h1 className={css.entrypoint_title_upper}>宇部高専 第61回高専祭</h1>
             <img alt='' src='/logo.png' loading='eager' />
-            <span className={css.entrypoint_date}>NITUC 61th fes</span>
-          </div>
-        </div>
-        <div className={css.info_container}>
-          <p>
-            開催日：2024年<strong>11月09日 (土), 10日 (日)</strong>
-          </p>
-          <Countdown />
-          <div className={css.scroll_prompt}>
-            <span>Scroll</span>
-            <img src={DownIcon} loading='eager' alt='' />
-            <span>down</span>
+            <span className={css.entrypoint_title_lower}>NITUC 61th fes</span>
           </div>
         </div>
         <div className={css.extra_info}>
+          {/* dateinfo is shown at the lowest area when display height is enough long
+              If it isn't enough, dateinfo should be shown at the next area of entrypoint
+              ... that's why dateinfo is a child of extra_info */}
+          <div className={css.dateinfo_container}>
+            <p>
+              開催日：2024年<strong>11月09日 (土), 10日 (日)</strong>
+            </p>
+            <Countdown />
+            <div className={css.scroll_prompt}>
+              <span>Scroll</span>
+              <img src={DownIcon} loading='eager' alt='' />
+              <span>down</span>
+            </div>
+          </div>
           <section>
             <h2 className={css.heading}>お知らせ</h2>
             <div className={css.article_list}>
@@ -64,7 +67,6 @@ export default function Index(): React.ReactElement {
                 path='pr-yamaguchi-cable-vision'
                 title='山口ケーブルテレビジョンでPRを行いました'
               />
-              {/* (TBA) */}
             </div>
           </section>
           <section>

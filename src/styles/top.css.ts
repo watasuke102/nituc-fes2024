@@ -26,7 +26,7 @@ export const entrypoint_wrapper = style({
       ${intro_animation_0} 0.7s forwards 0.4s ease,
       ${intro_animation_1} 1.5s forwards 1.9s cubic-bezier(0.22, 1, 0.36, 1)
     `,
-  height: '100dvh',
+  height: '100svh',
   alignContent: 'center',
   textAlign: 'center',
 });
@@ -55,39 +55,47 @@ export const entrypoint_circle = style({
   borderRadius: '100%',
   backgroundColor: colors.p_r,
 });
-export const entrypoint_title = style({
+export const entrypoint_title_upper = style({
   position: 'absolute',
-  top: 72,
+  top: 76,
   fontSize: '24px',
   fontWeight: 'bold',
   // dispel global
   backgroundColor: 'transparent',
 });
-export const entrypoint_date = style({
+export const entrypoint_title_lower = style({
   position: 'absolute',
   fontSize: 22,
-  bottom: 72,
+  bottom: 68,
 });
 
-const info_fadein = keyframes({
+const dateinfo_fadein = keyframes({
   '0%': {opacity: 0},
   '100%': {opacity: 1},
 });
-export const info_container = style({
-  position: 'absolute',
-  bottom: 24,
-  left: '50%',
-  transform: 'translateX(-50%)',
-  width: 'min(100%, 550px)',
+export const dateinfo_container = style({
   display: 'flex',
   flexDirection: 'column',
   gap: 12,
   textAlign: 'center',
-  paddingBlock: 12,
-  borderRadius: 4,
-  backgroundColor: colors.bg,
-  opacity: 0,
-  animation: `${info_fadein} 1s linear 2.7s forwards`,
+  marginBlock: 12,
+  paddingBottom: 24,
+  borderBottom: `2px solid ${colors.fg}`,
+  '@media': {
+    'screen and (height > 650px)': {
+      paddingBlock: 12,
+      position: 'absolute',
+      bottom: 24,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: 'min(100%, 550px)',
+      borderRadius: 4,
+      borderBottom: 'none',
+      backgroundColor: colors.bg,
+      opacity: 0,
+      animation: `${dateinfo_fadein} 1s linear 2.7s forwards`,
+    },
+  },
 });
 
 const scroll_prompt_blink = keyframes({
@@ -101,6 +109,11 @@ export const scroll_prompt = style({
   justifyContent: 'center',
   alignItems: 'center',
   animation: `${scroll_prompt_blink} 5s linear infinite`,
+  '@media': {
+    'screen and (height <= 650px)': {
+      display: 'none',
+    },
+  },
 });
 
 export const extra_info = style({
@@ -121,7 +134,7 @@ export const article_list = style({
   gap: 8,
   width: '90%',
   margin: '8px auto',
-  padding: '4px 8px',
+  padding: '12px 8px',
   border: `2px solid ${colors.fg}`,
   borderRadius: 4,
   wordBreak: 'break-word',

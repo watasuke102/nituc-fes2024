@@ -8,8 +8,9 @@ import * as css from '../styles/top.css';
 import React from 'react';
 import {Link} from 'gatsby';
 import {Seo} from '../common/Seo/Seo';
-import {Countdown} from '../features/Countdown';
+import {LinkButton} from '../common/LinkButton';
 import {Header} from '../common/Header';
+import {Countdown} from '../features/Countdown';
 import DownIcon from '/static/icon/double_arrow_down.svg';
 
 export const Head = (): React.ReactElement => (
@@ -77,7 +78,7 @@ export default function Index(): React.ReactElement {
             <p>
               2024年<strong>11月09日 (土), 10日 (日)</strong>
               <br />
-              <Link to='/timetable'>タイムテーブルを見る</Link>
+              <LinkButton to='/timetable'>タイムテーブルを見る</LinkButton>
             </p>
             <h3 className={css.heading}>実施場所</h3>
             <p>
@@ -85,7 +86,7 @@ export default function Index(): React.ReactElement {
               <br />
               ※駐車場はありません。外部参加の方は、公共交通機関のご利用をお願いします。
               <br />
-              <Link to='/map#access'>詳しく見る</Link>
+              <LinkButton to='/map#access'>マップを確認する</LinkButton>
             </p>
           </section>
           <hr />
@@ -95,7 +96,7 @@ export default function Index(): React.ReactElement {
               <div className={css.nav_card_info}>
                 <h3>イベント</h3>
                 <p>メインステージをはじめ、各所でイベントが開催されます。お見逃しなく！</p>
-                <Link to='/events'>詳しく見る</Link>
+                <LinkButton to='/events'>詳しく見る</LinkButton>
               </div>
             </div>
             <div className={css.nav_card}>
@@ -103,7 +104,7 @@ export default function Index(): React.ReactElement {
               <div className={css.nav_card_info}>
                 <h3>展示・バザー</h3>
                 <p>バザー、各部活動による展示、各学科による工学実験など盛り沢山！</p>
-                <Link to='/exhibitions'>詳しく見る</Link>
+                <LinkButton to='/exhibitions'>詳しく見る</LinkButton>
               </div>
             </div>
           </section>

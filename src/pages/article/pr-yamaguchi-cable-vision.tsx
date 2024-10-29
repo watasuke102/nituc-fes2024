@@ -6,9 +6,9 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import * as css from '../../styles/article.css';
 import React from 'react';
-import {Link} from 'gatsby';
 import {Seo} from '../../common/Seo/Seo';
 import {Header} from '../../common/Header';
+import {LinkButton} from '../../common/LinkButton';
 
 export const Head = (): React.ReactElement => (
   <Seo title_prefix='山口ケーブルテレビジョンでPRを行いました' desc='' url='/article/pr-yamaguchi-cable-vision' />
@@ -32,9 +32,7 @@ export default function PrYamaguchiCableVision(): JSX.Element {
             緊張しましたが、2人ともとても頑張りました。 高専祭までもう少し、みなさんで盛り上がっていきましょう！
           </p>
         </article>
-        <Link to='/' className={css.back_link}>
-          戻る
-        </Link>
+        <LinkButton to='/'>戻る</LinkButton>
       </main>
     </>
   );

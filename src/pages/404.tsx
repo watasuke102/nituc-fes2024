@@ -5,8 +5,8 @@
 // Twitter: @Watasuke102
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import React from 'react';
-import {Link} from 'gatsby';
 import {Header} from '../common/Header';
+import {LinkButton} from '../common/LinkButton';
 
 export default function NotFound(): React.ReactElement {
   return (
@@ -15,7 +15,7 @@ export default function NotFound(): React.ReactElement {
       <main style={{paddingTop: 80, textAlign: 'center'}}>
         <h1>404</h1>
         <p>ページが見つかりませんでした。</p>
-        <Link to='/'>トップページに戻る</Link>
+        <LinkButton to='/'>トップページに戻る</LinkButton>
       </main>
     </>
   );

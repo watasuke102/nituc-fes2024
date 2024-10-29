@@ -20,7 +20,7 @@ export default function Map(): JSX.Element {
       <h1>マップ</h1>
       <h2>場内マップ</h2>
       <ScrollContainer>
-        <img className={css.map} alt='場内マップ' src={map} />
+        <img className={css.map} alt='場内マップ' src={map} loading='eager' />
       </ScrollContainer>
       <h2 id='access'>アクセス</h2>
       <p>

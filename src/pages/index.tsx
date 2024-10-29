@@ -43,7 +43,7 @@ $ made by @Watasuke102. https://watasuke.net をよろしくおねがいしま�
     <>
       <Header />
       <main className={css.main}>
-        <div className={css.entrypoint_wrapper}>
+        <div className={css.entrypoint_wrapper} aria-hidden>
           <div className={css.entrypoint_bg} />
           <div className={css.entrypoint_circle}>
             <h1 className={css.entrypoint_title_upper}>宇部高専 第61回高専祭</h1>
@@ -62,7 +62,7 @@ $ made by @Watasuke102. https://watasuke.net をよろしくおねがいしま�
             <Countdown />
             <div className={css.scroll_prompt}>
               <span>Scroll</span>
-              <img src={DownIcon} loading='eager' alt='' />
+              <img src={DownIcon} alt='' loading='lazy' decoding='async' />
               <span>down</span>
             </div>
           </div>
@@ -78,7 +78,7 @@ $ made by @Watasuke102. https://watasuke.net をよろしくおねがいしま�
           </section>
           <section>
             <h2 className={css.heading}>概要</h2>
-            <img alt='' src='/logo.png' loading='lazy' className={css.logo_after_ep} />
+            <img className={css.logo_after_ep} src='/logo.png' alt='' loading='lazy' decoding='async' />
             <p>
               今年の宇部高専 高専祭のテーマは<strong>「YOISYO!」</strong>です。
               宇部高専全体で心をひとつにして、力強く、勢いよく、高専祭2024を盛り上げていくという意味が込められています。

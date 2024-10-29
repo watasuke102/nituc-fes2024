@@ -23,7 +23,7 @@ export function Header(): JSX.Element {
     <header className={css.header}>
       <div className={css.main}>
         <Link to='/' className={css.logo}>
-          <img alt='トップページ' src='/logo.png' loading='eager' style={{height: '100%'}} />
+          <img alt='トップページに戻る' src='/logo.png' loading='eager' style={{height: '100%'}} />
         </Link>
         <button
           className={css.menu_opener}

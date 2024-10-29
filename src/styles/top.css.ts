@@ -113,6 +113,11 @@ export const scroll_prompt = style({
     'screen and (height <= 650px)': {
       display: 'none',
     },
+    // prompt will flick without this
+    // because animation-duration will be set as 1ms by main.css
+    '(prefers-reduced-motion: reduce)': {
+      animationName: 'none',
+    },
   },
 });
 

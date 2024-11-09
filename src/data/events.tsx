@@ -41,7 +41,7 @@ export const events: EventDetail[] = [
   },
   {
     title: '映えコン',
-    date: 'オープニングから2日目の午前中まで',
+    date: 'オープニングから2日目 14:00 まで',
     desc: (
       <div>
         「映え」の瞬間をInstagramに投稿しよう！
@@ -52,9 +52,9 @@ export const events: EventDetail[] = [
             <strong>
               <code>kousensai_2024</code>
             </strong>{' '}
-            をタグ付け
+            をタグ付け+メンション
           </li>
-          <li>「2024高専祭」で投稿</li>
+          <li>「#2024高専祭」で投稿</li>
         </ol>
       </div>
     ),
@@ -167,7 +167,7 @@ export const events: EventDetail[] = [
       <span>
         50人に景品が当たる！！豪華景品をゲットしよう！
         <br />
-        抽選会の受付はメインステージ（第2体育館）で行います。
+        抽選会の受付は、2日目 09:30～15:00 の間、メインステージ（第2体育館）で行います。
       </span>
     ),
   },

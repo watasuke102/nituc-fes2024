@@ -13,7 +13,7 @@ import PlaceIcon from '/static/icon/place.svg';
 import TimeIcon from '/static/icon/time.svg';
 import GroupIcon from '/static/icon/group.svg';
 
-export const Head = (): React.ReactElement => <Seo title_prefix='イベント' desc='' url='/events' />;
+export const Head = (): React.ReactElement => <Seo title_prefix='イベント' desc='開催予定のイベント一覧' url='/events' />;
 
 export default function Events(): JSX.Element {
   return (

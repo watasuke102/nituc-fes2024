@@ -6,6 +6,7 @@
 // This software is released under the MIT or MIT SUSHI-WARE License.
 import * as css from './Countdown.css';
 import React from 'react';
+import cs from 'classnames';
 import {ZeroPadding} from '../../utils/ZeroPadding';
 
 type Props = {
@@ -34,13 +35,17 @@ export function Countdown(props: Props) {
   if (year === 1969 && month === 12 && (date === 29 || date === 30)) {
     return (
       <div className={css.container}>
-        <span className={css.announce}>高専祭 開催中！！</span>
+        <span className={cs(css.announce, css.during_event)}>高専祭 開催中！！</span>
       </div>
     );
   }
 
   if (year !== 1970) {
-    return <div className={css.container} />;
+    return (
+      <div className={css.container}>
+        <span className={css.announce}>宇部高専 第61回高専祭は終了しました。</span>
+      </div>
+    );
   }
 
   return (

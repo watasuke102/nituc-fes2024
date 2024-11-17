@@ -9,7 +9,9 @@ import {style} from '@vanilla-extract/css';
 export const container = style({
   height: 64,
   display: 'flex',
+  margin: 'auto',
   flexDirection: 'column',
+  justifyItems: 'center',
   alignItems: 'center',
 });
 export const times = style({
@@ -26,6 +28,10 @@ export const num = style({
   wordBreak: 'keep-all',
 });
 export const announce = style({
+  display: 'block',
+  margin: 'auto',
   fontWeight: 'bold',
+});
+export const during_event = style({
   fontSize: '2.3em',
 });
